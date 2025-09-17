@@ -1,6 +1,11 @@
 <div class="product-card">
-  <img [src]="product.image" alt="{{product.title}}" />
-  <h3>{{ product.title }}</h3>
-  <p>₹{{ product.price }}</p>
-  <button>Add to Cart</button>
+  <img [src]="product.image" alt="{{ product.title }}" class="product-img" />
+
+  <div class="product-info">
+    <h3 class="product-title">{{ product.title }}</h3>
+    <p class="product-price">₹ {{ product.price }}</p>
+    <p class="product-rating">⭐ {{ product.rating }}</p>
+
+    <button class="add-btn" (click)="addToCart()">Add to Cart</button>
+  </div>
 </div>
